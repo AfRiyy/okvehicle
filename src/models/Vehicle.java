@@ -1,13 +1,14 @@
 /*
  * File: Vehicle.java
  * Created Date: 2021-09-25 00:50:58
- * Author: Sallai Andras
- * Github: https://github.com/andteki
+ * Author: Madarász Dávid
+ * Original Author: Sallai Andras
+ * Github: https://github.com/afriyy
  * -----
- * Last Modified: 2021-09-25
+ * Last Modified: 2021-10-08
  * Modified By: Sallai Andras
  * -----
- * Copyright (c) 2021 Sallai Andras
+ * Copyright (c) 2021 Madarász Dávid
  * 
  * GNU GPL v2
  */

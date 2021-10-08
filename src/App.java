@@ -1,13 +1,14 @@
 /*
  * File: App.java
  * Created Date: 2021-09-24 22:13:27
- * Author: Sallai Andras
- * Github: https://github.com/andteki
+ * Author: Madarász Dávid
+ * Original Author: Sallai Andras
+ * Github: https://github.com/afriyy
  * -----
- * Last Modified: 2021-09-24
+ * Last Modified: 2021-10-08
  * Modified By: Sallai Andras
  * -----
- * Copyright (c) 2021 Sallai Andras
+ * Copyright (c) 2021 Madarász Dávid
  * 
  * GNU GPL v2
  */

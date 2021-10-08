@@ -13,6 +13,9 @@
  * GNU GPL v2
  */
 
+//TODO: Törlés megvalósítása
+//TODO: Mentés megvalósítása
+
 package controllers;
 
 
@@ -24,38 +27,45 @@ import views.MainWindow;
 public class MainController {
     MainWindow mainWindow;
     LoadVehicle loadVehicle;
+        
+
     public MainController(MainWindow mainWindow) {
         this.mainWindow = mainWindow;
-        this.loadVehicle = new LoadVehicle();
-        ArrayList<Vehicle> vehicleList = this.loadVehicle.load();
-        for(Vehicle vehicle : vehicleList) {
-            this.mainWindow.vehicleModel.addRow(
-                new Object[] {vehicle.ordinal, vehicle.brand, vehicle.year}
-            );
-        }
-        //TODO A névtelen metódus tartalmát ki kell szervezni
-        //TODO A függvény tartalmát is több részre bontani
-        
+        fillVehicleList();
+        initAddButton();
+        initDelButton();
+        initSaveButton();
+    }
+    private void initAddButton() {
         this.mainWindow.addButton.addActionListener(event -> {
             System.out.println("Hozzáadás...");
             String ordinal = this.mainWindow.ordinalField.getText();
             String brand = this.mainWindow.brandField.getText();
             String year = this.mainWindow.yearField.getText();
-            this.mainWindow.ordinalField.setText("");
-            this.mainWindow.brandField.setText("");
-            this.mainWindow.yearField.setText("");
-            this.mainWindow.vehicleModel.addRow(
-                new Object[] {ordinal, brand, year}
-            );
+            setFields();
+            this.mainWindow.vehicleModel.addRow(new Object[] { ordinal, brand, year });
         });
-        //TODO: Törlés megvalósítása
+    }
+    private void setFields() {
+        this.mainWindow.ordinalField.setText("");
+        this.mainWindow.brandField.setText("");
+        this.mainWindow.yearField.setText("");
+    }
+    private void initDelButton() {
         this.mainWindow.delButton.addActionListener(event -> {
             System.out.println("Törlés...");
         });
-        //TODO: Mentés megvalósítása
+    }
+    private void initSaveButton() {
         this.mainWindow.saveButton.addActionListener(event -> {
             System.out.println("Mentés...");
         });
     }
-    
+    private void fillVehicleList() {
+        this.loadVehicle = new LoadVehicle();
+        ArrayList<Vehicle> vehicleList = this.loadVehicle.load();
+        for (Vehicle vehicle : vehicleList) {
+            this.mainWindow.vehicleModel.addRow(new Object[] { vehicle.ordinal, vehicle.brand, vehicle.year });
+        }
+    }
 }

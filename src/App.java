@@ -5,8 +5,8 @@
  * Original Author: Sallai Andras
  * Github: https://github.com/afriyy
  * -----
- * Last Modified: 2021-10-08
- * Modified By: Sallai Andras
+ * Last Modified: 2021-10-11
+ * Modified By: Madarász Dávid
  * -----
  * Copyright (c) 2021 Madarász Dávid
  * 
